@@ -33,7 +33,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.s[ac]ss$/,
+                test: /\.(css|scss)$/,
                 exclude: /node_modules/,
                 use: [
                     MiniCssExtractPlugin.loader,
@@ -59,6 +59,7 @@ module.exports = {
             watch: true
         },
         watchFiles: ["./**"],
+        historyApiFallback: true,
         compress: true,
         port: 8080,
         open: true

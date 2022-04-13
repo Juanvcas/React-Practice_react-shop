@@ -1,0 +1,130 @@
+.main {
+    width: 100%;
+    min-width: 32rem;
+    height: 100vh;
+    min-height: 55rem;
+}
+
+.main__log-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 34rem;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 6rem;
+    text-align: center;
+}
+
+.main__log-cont > img {
+    width: 20rem;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Login container */
+
+.log__form-cont {
+    width: 100%;
+    height: auto;
+    margin-top: 4.8rem;
+}
+
+/* Form */
+
+.form__lbl {
+    display: block;
+    width: 100;
+    height: auto;
+}
+
+.form__lbl:nth-child(2) {
+    margin-top: 2.4rem;
+}
+
+.form__lbl span {
+    display: block;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+}
+
+.form__lbl input {
+    width: 100%;
+    height: 4.2rem;
+    margin-top: .6rem;
+    padding: 1rem .8rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: #797979;
+    background-color: var(--ti_field);
+    border: none;
+    border-radius: 1rem;
+}
+
+.form > input {
+    width: 100%;
+    height: 6rem;
+    margin-top: 3.6rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.25;
+    color: var(--white);
+    background-color: var(--h_green);
+    border: none;
+    border-radius: 1rem;
+}
+
+.log__form-cont > a {
+    display: inline-block;
+    margin-top: 2.8rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    color: var(--h_green);
+}
+
+.log__sp {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.log__sp > a {
+    position: relative;
+    width: 100%;
+    height: 6rem;
+    bottom: 2rem;
+    padding: calc(3rem - 2.25rem/2) 0;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+    color: var(--h_green);
+    text-decoration: none;
+    background-color: var(--white);
+    border: solid .1rem var(--h_green);
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+    .main__log-cont {
+        padding: 0;
+    }
+
+    .main__log-cont > img {
+        display: none;
+    }
+
+    .log__sp {
+        flex-grow: 0;
+        padding-top: 6rem;
+    }
+}

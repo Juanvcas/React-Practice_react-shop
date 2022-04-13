@@ -1,0 +1,26 @@
+/* Variables */
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --dark: #232830;
+    --ti_field: #f7f7f7;
+    --vl_pink: #c7c7c7;
+    --h_green: #acd9b2;
+}
+
+/* Global Config */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
