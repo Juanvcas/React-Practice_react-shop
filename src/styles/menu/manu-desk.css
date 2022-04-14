@@ -1,0 +1,32 @@
+.log-menu__desk {
+    width: 15rem;
+    height: auto;
+    padding: 2.4rem;
+    text-align: right;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.119789);
+}
+
+.desk__acc {
+    border-top: solid .1rem rgba(97, 97, 97, 0.1);
+}
+
+.desk__opt a, .desk__acc a {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2rem;
+    text-decoration: none;
+}
+
+.desk__opt a {
+    margin-bottom: 3rem;
+    color: var(--black);
+}
+
+.desk__acc a {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.75rem;
+    color: var(--h_green);
+}

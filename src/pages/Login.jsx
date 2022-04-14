@@ -3,8 +3,8 @@ import "../styles/login-styles/login-phone.css";
 
 const Login = () => {
     return (
-        <div className="main">
-            <section className="main__log-cont">
+        <div className="login-main">
+            <section className="login-main__log-cont">
                 <img src="../assets/svg/logo_yard_sale.svg" alt="Yard sale Logo"/>
                 <section className="log__form-cont">
                     <form action="" className="form">
