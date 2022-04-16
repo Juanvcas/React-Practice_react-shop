@@ -1,0 +1,9 @@
+/* Product List */
+.main__arts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}

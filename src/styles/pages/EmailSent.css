@@ -1,0 +1,26 @@
+/* Email Sent */
+.main-mrg__cont > p:nth-child(6) {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.main-mrg__cont > p:nth-child(6) a {
+    color: var(--h_green);
+    text-decoration: none;
+}
+
+.eml__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--ti_field);
+    border-radius: 50%;
+}
+
+.eml__icon img {
+    width: 9rem;
+    height: auto;
+}

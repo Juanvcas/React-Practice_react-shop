@@ -1,11 +1,16 @@
 import React from 'react';
-import "../styles/header.css"
+import "../styles/Header.css";
+
+//Componentes
+import MenuMobile from './MenuMobile';
+import MenuDesk from './MenuDesk';
 
 const Header = () => {
     return (
         <header className="header">
             <menu href="" className="header__menu">
                 <img src="./src/svg/icon_menu.svg" alt=""/>
+                <MenuMobile/>
             </menu>
             <nav className="header__nav">
                 <ul className="nav__ul">
@@ -19,9 +24,11 @@ const Header = () => {
             </nav>
             <img src="./src/svg/logo_yard_sale.svg" alt="Yard sale Logo"/>
             <div className="header__log">
-                <p className="log__menu">example@email.com <span><img src="./src/svg/bt_arrow_down.svg" alt="arrow down"/></span></p>
-                <img src="./src/svg/icon_shopping_cart.svg" alt="shopping cart"/>
-                <div>
+                <p className="log__menu">example@email.com <span><img src="./src/svg/bt_arrow_down.svg" alt=""/>
+                    <MenuDesk/>
+                </span></p>
+                <img src="./src/svg/icon_shopping_cart.svg" alt=""/>
+                <div className='cart-cuantity'>
                     <p>2</p>
                 </div>
             </div>

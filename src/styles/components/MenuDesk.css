@@ -1,8 +1,14 @@
+/* Menu */
 .log-menu__desk {
+    position: absolute;
+    display: none;
+    top: 4rem;
+    right: 5.4rem;
     width: 15rem;
     height: auto;
     padding: 2.4rem;
     text-align: right;
+    background-color: var(--white);
     border-radius: .5rem;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.119789);
 }

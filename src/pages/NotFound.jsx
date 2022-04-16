@@ -1,15 +1,15 @@
 import React from 'react';
-import "../styles/NotFound.css"
+import "../styles/NotFound.css";
 
 const NotFound = () => {
     return (
-        <main className='nf-main'>
-            <section className='nf-main__msg'>
-                <div className='msg__cont'>
-                    <h1>404</h1>
+        <main className='main-mrg'>
+            <section className='main-mrg__cont nf-cont'>
+                <div>
+                    <p>404</p>
                 </div>
-                <p>Ups, the page wasn't found.</p>
-                <a href="">Go Home</a>
+                <p>Ups, the page wasn't found :(</p>
+                <a href="" className='main-btt'>Go Home</a>
             </section>
         </main>
     );

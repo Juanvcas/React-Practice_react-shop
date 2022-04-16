@@ -1,3 +1,4 @@
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -17,6 +18,10 @@
     display: block;
     width: 2.4rem;
     height: auto;
+}
+
+.header__menu:hover .menu__mbl {
+    display: flex;
 }
 
 .header__menu > img {
@@ -74,14 +79,13 @@
     border-radius: 50%;
 }
 
-.header__log > div > p {
+.cart-cuantity {
     font-weight: 700;
     line-height: 1rem;
     color: var(--white);
 }
 
 @media (min-width: 768px) {
-
     .header {
         padding: 0 5%;
     }
@@ -117,7 +121,11 @@
         width: .8rem;
         height: .4rem;
         margin-left: .4rem;
-        opacity: 0.25;
+    }
+
+    .log__menu > span:hover .log-menu__desk {
+        display: block;
+        z-index: 10;
     }
     
     .log__menu > span > img {

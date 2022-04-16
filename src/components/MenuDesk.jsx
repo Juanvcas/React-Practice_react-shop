@@ -1,9 +1,9 @@
 import React from 'react';
-import "../styles/menu/manu-desk.css";
+import "../styles/components/MenuDesk.css";
 
 const MenuDesk = () => {
     return (
-        <menu className="log-menu__desk">
+        <div className="log-menu__desk">
             <section className="desk__opt">
                 <a href="">My orders</a>
                 <a href="">My account</a>
@@ -11,7 +11,7 @@ const MenuDesk = () => {
             <section className="desk__acc">
                 <a href="">Sing out</a>
             </section>
-        </menu>
+        </div>
     );
 }
 

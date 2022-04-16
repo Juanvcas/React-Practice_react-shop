@@ -1,9 +1,9 @@
 import React from 'react';
-import "../styles/menu/menu-mobile.css";
+import "../styles/components/MenuMobile.css";
 
 const MenuMobile = () => {
     return (
-        <menu className="menu__mbl">
+        <div className="menu__mbl">
             <span></span>
             <section className="mbl__cats">
                 <h2>CATEGORIES</h2>
@@ -24,7 +24,7 @@ const MenuMobile = () => {
                     <a href="">Sing out</a>
                 </div>
             </section>
-        </menu>
+        </div>
     );
 }
 
