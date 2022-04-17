@@ -1,0 +1,72 @@
+/* My Order */
+.main-mrg > section {
+    justify-content: start;
+    padding-top: 2rem;
+}
+
+.main-mrg__cont > h1 {
+    position: absolute;
+    margin-bottom: 0;
+    top: 1rem;
+}
+
+.ord__total {
+    display: flex;
+    padding: 1.6rem;
+    width: 100%;
+    height: auto;
+    background-color: var(--ti_field);
+    border-radius: 1rem;
+}
+
+.total__info {
+    flex-grow: 1;
+}
+
+.total__info p:nth-child(1) {
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.total__info P:nth-child(2) {
+    margin-top: .4rem;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: #797979;
+}
+
+.total__total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total__total p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.875rem;
+}
+
+.ord__list {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .main-mrg > section {
+        padding-top: 8rem;
+    }
+    
+    .main-mrg__cont > h1 {
+        position: relative;
+        margin-bottom: 5rem;
+        top: 0;
+    }
+}

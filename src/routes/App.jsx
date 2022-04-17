@@ -11,6 +11,10 @@ import CreateAccount from "../pages/CreateAccount";
 import RecoveryPass from "../pages/RecoveryPass";
 import EmailSent from "../pages/EmailSent";
 import CreatePass from "../pages/CreatePass";
+import MyAccount from "../pages/MyAccount";
+import EditAccount from "../pages/EditAccount";
+import MyOrder from "../pages/MyOrder";
+import Orders from "../pages/Orders";
 import NotFound from "../pages/NotFound";
 
 //Styles
@@ -27,6 +31,10 @@ const App = () => {
                     <Route exact path="/recovery-password" element={<RecoveryPass/>} />
                     <Route exact path="/email-sent" element={<EmailSent/>} />
                     <Route exact path="/create-password" element={<CreatePass/>} />
+                    <Route exact path="/my-account" element={<MyAccount/>} />
+                    <Route exact path="/edit-account" element={<EditAccount/>} />
+                    <Route exact path="/my-order" element={<MyOrder/>} />
+                    <Route exact path="/orders" element={<Orders/>} />
                     <Route path="*" element={<NotFound/>} />
                 </Routes>
             </Layout>

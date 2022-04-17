@@ -1,0 +1,120 @@
+/* Shopping cart */
+.cart {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100vh - 4.8rem);
+    padding: 2.4rem 0;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.119789);
+}
+
+.cart__head {
+    width: auto;
+    height: auto;
+}
+
+.cart__head > span {
+    display: none;
+}
+
+.cart__head > p {
+    position: absolute;
+    top: -3.675rem;
+    width: 12.5rem;
+    height: auto;
+    margin: 0 calc(50% - 6rem);
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+}
+
+.cart__list {
+    flex-grow: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.cart__info {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.info__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 7.6rem;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+    padding: 0 1.6rem;
+    background-color: var(--ti_field);
+    border-radius: 1rem;
+}
+
+.info__total > p:nth-child(1) {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+}
+
+.info__total > p:nth-child(2) {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.875rem;
+}
+
+.cart__chk {
+    display: block;
+    width: 90%;
+    height: 6rem;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+    color: var(--white);
+    background-color: var(--h_green);
+    border: none;
+    border-radius: 1rem;
+}
+
+
+
+@media (min-width: 768px) {
+    .cart {
+        max-width: 38rem;
+    }
+
+    .cart__head {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .cart__head > span {
+        display: block;
+    }
+
+    .cart__head > p {
+        position: relative;
+        top: 0;
+        margin: 0;
+        margin-left: 2.4rem;
+    }
+
+    .cart__list {
+        margin-top: 1.2rem;
+    }
+}

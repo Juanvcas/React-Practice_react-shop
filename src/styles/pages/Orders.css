@@ -1,0 +1,31 @@
+/* Orders */
+.main-mrg > section {
+    justify-content: start;
+    padding-top: 2rem;
+}
+
+.main-mrg__cont > h1 {
+    position: absolute;
+    margin-bottom: 0;
+    top: 1rem;
+}
+
+.ords-list {
+    width: 90%;
+    max-width: 40rem;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .main-mrg > section {
+        padding-top: 8rem;
+    }
+    
+    .main-mrg__cont > h1 {
+        position: relative;
+        margin-bottom: 5rem;
+        top: 0;
+    }
+}
