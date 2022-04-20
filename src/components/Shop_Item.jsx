@@ -1,6 +1,9 @@
 import React from 'react'
 import "../styles/components/ItemShop.css";
 
+//Assets
+import i_atCart from "@svgAssets/bt_add_to_cart.svg"
+
 const ItemShop = () => {
     return (
         <article className="arts__itm">
@@ -12,7 +15,7 @@ const ItemShop = () => {
                 <p>Round Shelf</p>
             </div>
             <figure className="itm__cart">
-                <img src="./src/svg/bt_add_to_cart.svg" alt="cart icon"/>
+                <img src={i_atCart} alt="cart icon"/>
             </figure>
         </article>
     );

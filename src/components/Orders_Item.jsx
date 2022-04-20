@@ -1,6 +1,9 @@
 import React from 'react';
 import "../styles/components/Orders_Item.css";
 
+//Assets
+import i_arrRight from "@svgAssets/bt_arrow_right.svg";
+
 const Orders_Item = () => {
     return (
         <article className="ords-list__art">
@@ -11,7 +14,7 @@ const Orders_Item = () => {
             <div className="total__total">
                 <p>$ 960,00</p>
                 <span>
-                    <img src="./src/svg/bt_arrow_right.svg" alt=""/>
+                    <img src={i_arrRight} alt=""/>
                 </span>
             </div>
         </article>

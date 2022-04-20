@@ -7,6 +7,9 @@ import Header from '../components/Header';
 //Containers
 import ProductList from '../containers/ProductList';
 
+//Assets
+import i_search from "@svgAssets/icon_search.svg"
+
 const Home = () => {
     return (
         <div className='page-cont'>
@@ -14,7 +17,7 @@ const Home = () => {
             <main className="main">
                 <section className="main__menu">
                     <div className="menu__srch">
-                        <img src="./src/svg/icon_search.svg" alt="search icon"/>
+                        <img src={i_search} alt="search icon"/>
                         <input type="text" placeholder="Search product"/>
                     </div>
                     <section className="menu__cat">

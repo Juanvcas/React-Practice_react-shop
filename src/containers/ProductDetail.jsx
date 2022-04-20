@@ -1,11 +1,15 @@
 import React from 'react';
 import "../styles/containers/ProductDetail.css";
 
+//Assets
+import i_close from "@svgAssets/icon_close.svg";
+import i_cartWhite from "@svgAssets/icon_cart_white.svg";
+
 const ProductDetail = () => {
     return (
         <aside className="prod">
             <div className="prod__cls">
-                <img src="./src/svg/icon_close.svg" alt="icon close"/>
+                <img src={i_close} alt="icon close"/>
             </div>
             <section className="prod__dtl">
                 <section className="dtl__imgs">
@@ -33,7 +37,7 @@ const ProductDetail = () => {
                         <p>With its functional and practical interior, this refrigerator also fulfills a decorative function, adding personality and a retro-vintage aesthetic to your kitchen or workplace.</p>
                     </article>
                 </section>
-                <button className="prod__add"><img src="./src/svg/icon_cart_white.svg" alt="icon cart"/>Add to cart</button>
+                <button className="prod__add"><img src={i_cartWhite} alt="icon cart"/>Add to cart</button>
             </section>
         </aside>
     );

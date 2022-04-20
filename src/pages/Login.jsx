@@ -4,13 +4,16 @@ import "../styles/pages/Login.css";
 //Containers
 import Header from '../components/Header';
 
+//Assets
+import i_ysLogo from "@svgAssets/logo_yard_sale.svg";
+
 const Login = () => {
     return (
         <div className='page-cont'>
             <Header/>
             <main className="main-mrg">
                 <section className="main-mrg__cont">
-                    <img src="./src/svg/logo_yard_sale.svg" alt="Yard sale Logo"/>
+                    <img src={i_ysLogo} alt="Yard sale Logo"/>
                     <form action="" className="form">
                         <label htmlFor="email" className="form__lbl">
                             <span>Email Address</span>

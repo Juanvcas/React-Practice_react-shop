@@ -3,13 +3,16 @@ import React from 'react';
 //Components
 import Header from '../components/Header';
 
+//Assets
+import i_ysLogo from "@svgAssets/logo_yard_sale.svg";
+
 const RecoveryPass = () => {
     return (
         <div className='page-cont'>
             <Header/>
             <main className="main-mrg">
                 <section className="main-mrg__cont">
-                    <img src="./src/svg/logo_yard_sale.svg" alt="Yard sale Logo"/>
+                    <img src={i_ysLogo} alt="Yard sale Logo"/>
                     <h1>Recovery Password</h1>
                     <p>Inform the email address used to create your account</p>
                     <form action="" className="form">

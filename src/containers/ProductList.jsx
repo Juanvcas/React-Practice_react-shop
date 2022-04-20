@@ -2,19 +2,19 @@ import React from 'react';
 import "../styles/containers/ProductList.css";
 
 //Componentes
-import ItemShop from '../components/ItemShop';
+import Shop_Item from '../components/Shop_Item';
 
 const ProductList = () => {
     return (
         <section className="main__arts">
-            <ItemShop/>
-            <ItemShop/>
-            <ItemShop/>
-            <ItemShop/>
-            <ItemShop/>
-            <ItemShop/>
-            <ItemShop/>
-            <ItemShop/>
+            <Shop_Item/>
+            <Shop_Item/>
+            <Shop_Item/>
+            <Shop_Item/>
+            <Shop_Item/>
+            <Shop_Item/>
+            <Shop_Item/>
+            <Shop_Item/>
         </section>
     );
 }

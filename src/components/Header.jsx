@@ -5,11 +5,17 @@ import "../styles/Header.css";
 import MenuMobile from './MenuMobile';
 import MenuDesk from './MenuDesk';
 
+//Assets
+import i_menu from "@svgAssets/icon_menu.svg";
+import i_ysLogo from "@svgAssets/logo_yard_sale.svg";
+import i_shCart from "@svgAssets/icon_shopping_cart.svg";
+import i_arrDown from "@svgAssets/bt_arrow_down.svg";
+
 const Header = () => {
     return (
         <header className="header">
             <menu href="" className="header__menu">
-                <img src="./src/svg/icon_menu.svg" alt=""/>
+                <img src={i_menu} alt=""/>
                 <MenuMobile/>
             </menu>
             <nav className="header__nav">
@@ -22,12 +28,12 @@ const Header = () => {
                     <li><a href="">Others</a></li>
                 </ul>
             </nav>
-            <img src="./src/svg/logo_yard_sale.svg" alt="Yard sale Logo"/>
+            <img src={i_ysLogo} alt="Yard sale Logo"/>
             <div className="header__log">
-                <p className="log__menu">example@email.com <span><img src="./src/svg/bt_arrow_down.svg" alt=""/>
+                <p className="log__menu">example@email.com <span><img src={i_arrDown} alt="arrow down"/>
                     <MenuDesk/>
                 </span></p>
-                <img src="./src/svg/icon_shopping_cart.svg" alt=""/>
+                <img src={i_shCart} alt="shopping cart"/>
                 <div className='cart-cuantity'>
                     <p>2</p>
                 </div>
