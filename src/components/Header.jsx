@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../styles/Header.css";
 
 //Componentes
@@ -12,6 +12,10 @@ import i_shCart from "@svgAssets/icon_shopping_cart.svg";
 import i_arrDown from "@svgAssets/bt_arrow_down.svg";
 
 const Header = () => {
+    const [toggle, setToggle] = useState(false);
+    const handleToggle = () => {
+        setToggle(toggle ? false : true);
+    }
     return (
         <header className="header">
             <menu href="" className="header__menu">
@@ -30,9 +34,9 @@ const Header = () => {
             </nav>
             <img src={i_ysLogo} alt="Yard sale Logo"/>
             <div className="header__log">
-                <p className="log__menu">example@email.com <span><img src={i_arrDown} alt="arrow down"/>
-                    <MenuDesk/>
-                </span></p>
+                <div className="log__menu">example@email.com<span onClick={handleToggle}><img src={i_arrDown} alt="arrow down"/>
+                    {toggle ? <MenuDesk/> : null}
+                </span></div>
                 <img src={i_shCart} alt="shopping cart"/>
                 <div className='cart-cuantity'>
                     <p>2</p>

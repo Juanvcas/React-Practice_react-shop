@@ -1,7 +1,7 @@
 /* Menu */
 .log-menu__desk {
     position: absolute;
-    display: none;
+    display: block;
     top: 4rem;
     right: 5.4rem;
     width: 15rem;

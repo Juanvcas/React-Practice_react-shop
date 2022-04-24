@@ -54,7 +54,7 @@
 }
 
 .header__log {
-    display: flex;
+    display: none;
     align-items: center;
     position: relative;
     width: auto;
@@ -66,7 +66,7 @@
     height: auto;
 }
 
-.header__log > div {
+.header__log > div:nth-child(3) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,6 +106,10 @@
         order: 2;
     }
 
+    .header__log {
+        display: flex;
+    }
+
     .log__menu {
         display: flex;
         align-items: center;
@@ -121,11 +125,6 @@
         width: .8rem;
         height: .4rem;
         margin-left: .4rem;
-    }
-
-    .log__menu > span:hover .log-menu__desk {
-        display: block;
-        z-index: 10;
     }
     
     .log__menu > span > img {
