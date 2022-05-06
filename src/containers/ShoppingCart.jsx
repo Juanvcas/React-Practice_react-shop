@@ -1,35 +1,43 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import "../styles/containers/ShoppingCart.css";
 
 //Components
 import Cart_Item from '../components/Cart_Item';
 
+//Context
+import AppContext from '../context/AppContext';
+
 //Assets
 import i_arrLeft from "@svgAssets/bt_arrow_left.svg";
 
 const ShoppingCart = () => {
+    const {state:{cart}} = useContext(AppContext);
+    const total = () => {
+        const prices = [null];
+        cart.map(item => prices.push(item.price));
+        const totalPrice = prices.reduce((sum,price) => (sum + price));
+        return totalPrice;
+    }
+
     return (
-        <aside class="cart">
-            <div class="cart__head">
+        <aside className="cart">
+            <div className="cart__head">
                 <span>
                     <img src={i_arrLeft} alt="icon arrow left"/>
                 </span>
                 <p>Shopping cart</p>
             </div>
-            <section class="cart__list">
-                <Cart_Item/>
-                <Cart_Item/>
-                <Cart_Item/>
-                <Cart_Item/>
-                <Cart_Item/>
-                <Cart_Item/>
+            <section className="cart__list">
+                {cart.map((productItem,index) => {
+                    return <Cart_Item product={productItem} key={`Shop_Item: ${index}`} uniqueKey={index}/>
+                })}
             </section>
-            <section class="cart_info">
-                <section class="info__total">
+            <section className="cart_info">
+                <section className="info__total">
                     <p>Total</p>
-                    <p>$ 960,00</p>
+                    <p>$ {total()}</p>
                 </section>
-                <button class="cart__chk">Checkout</button>
+                <button className="cart__chk">Checkout</button>
             </section>
         </aside>
     );

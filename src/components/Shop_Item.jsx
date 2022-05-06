@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../styles/components/ItemShop.css";
 
+//Context
+import AppContext from '../context/AppContext';
+
 //Assets
-import i_atCart from "@svgAssets/bt_add_to_cart.svg"
+import i_atCart from "@svgAssets/bt_add_to_cart.svg";
 
 const ItemShop = ({products}) => {
+    const {addToCart} = useContext(AppContext);
+    const handleClick = (item) => {
+        addToCart(item);
+    }
     return (
         <article className="arts__itm">
             <figure className="itm__img">
@@ -15,9 +22,9 @@ const ItemShop = ({products}) => {
                     <p>$ {products.price}</p>
                     <p>{products.title}</p>
                 </div>
-                <figure className="itm__cart">
+                <button className="itm__cart" onClick={() => handleClick(products)}>
                     <img src={i_atCart} alt="cart icon"/>
-                </figure>
+                </button>
             </section>
         </article>
     );

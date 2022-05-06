@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "../styles/components/CartItem.css";
+
+//Context
+import AppContext from '../context/AppContext';
 
 //Assets
 import i_close from "@svgAssets/icon_close.svg";
 
-const CartItem = () => {
+const CartItem = (productItem) => {
+    const {removeFromCart} = useContext(AppContext);
+    const {product,uniqueKey} = productItem;
     return (
-        <article class="list__art">
+        <article className="list__art">
             <figure>
-                <img src="https://i.postimg.cc/VsqRTCTW/Bitmap.jpg" alt="cart item"/>
+                <img src={product.images} alt={product.title}/>
             </figure>
-            <p>Retro fridge</p>
-            <p>$ 120,00</p>
+            <p>{product.title}</p>
+            <p>$ {product.price}</p>
             <span>
-                <img src={i_close} alt="icon close"/>
+                <img src={i_close} alt="icon close" onClick={() => removeFromCart(uniqueKey)}/>
             </span>
         </article>
     );
