@@ -24,6 +24,10 @@ const Header = () => {
     const handleToggle = () => {
         setToggleUser(toggleUser ? false : true);
     }
+    const handleToggleCart = () => {
+        setToggleCart(!toggleCart);
+    }
+
     return (
         <header className="header">
             <menu href="" className="header__menu">
@@ -45,9 +49,9 @@ const Header = () => {
                 <div className="log__menu">example@email.com<span onClick={handleToggle}><img src={i_arrDown} alt="arrow down"/>
                     {toggleUser ? <MenuDesk/> : null}
                 </span></div>
-                <img src={i_shCart} alt="shopping cart" onClick={() => {setToggleCart(!toggleCart)}}/>
+                <img src={i_shCart} alt="shopping cart" onClick={handleToggleCart}/>
                 {cart.length > 0 ? <div className='cart-cuantity'><p>{cart.length}</p></div> : null}
-                    {toggleCart && <ShoppingCart/>}
+                    {toggleCart && <ShoppingCart toggle={toggleCart} setToggle={setToggleCart}/>}
             </div>
         </header>
     );

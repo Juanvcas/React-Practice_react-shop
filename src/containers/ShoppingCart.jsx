@@ -10,8 +10,11 @@ import AppContext from '../context/AppContext';
 //Assets
 import i_arrLeft from "@svgAssets/bt_arrow_left.svg";
 
-const ShoppingCart = () => {
+const ShoppingCart = (props) => {
     const {state:{cart}} = useContext(AppContext);
+
+    const {toggle,setToggle} = props;
+
     const total = () => {
         const prices = [null];
         cart.map(item => prices.push(item.price));
@@ -23,7 +26,7 @@ const ShoppingCart = () => {
         <aside className="cart">
             <div className="cart__head">
                 <span>
-                    <img src={i_arrLeft} alt="icon arrow left"/>
+                    <img src={i_arrLeft} alt="icon arrow left" onClick={() => setToggle(!toggle)}/>
                 </span>
                 <p>Shopping cart</p>
             </div>

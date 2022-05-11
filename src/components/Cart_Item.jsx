@@ -18,7 +18,7 @@ const CartItem = (productItem) => {
             <p>{product.title}</p>
             <p>$ {product.price}</p>
             <span>
-                <img src={i_close} alt="icon close" onClick={() => removeFromCart(uniqueKey)}/>
+                <img src={i_close} alt="icon close" onClick={() => removeFromCart(product,uniqueKey)}/>
             </span>
         </article>
     );

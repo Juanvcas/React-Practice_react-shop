@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useState,useContext } from 'react'
 import "../styles/components/ItemShop.css";
 
 //Context
@@ -6,11 +6,14 @@ import AppContext from '../context/AppContext';
 
 //Assets
 import i_atCart from "@svgAssets/bt_add_to_cart.svg";
+import i_addtCart from "@svgAssets/bt_added_to_cart.svg";
 
 const ItemShop = ({products}) => {
-    const {addToCart} = useContext(AppContext);
+    const [add,setAdd] = useState(false);
+    const {addToCart,removeFromCart} = useContext(AppContext);
     const handleClick = (item) => {
-        addToCart(item);
+        setAdd(!add);
+        add ? removeFromCart(item,null) : addToCart(item)
     }
     return (
         <article className="arts__itm">
@@ -23,7 +26,7 @@ const ItemShop = ({products}) => {
                     <p>{products.title}</p>
                 </div>
                 <button className="itm__cart" onClick={() => handleClick(products)}>
-                    <img src={i_atCart} alt="cart icon"/>
+                    {add ? <img src={i_addtCart} alt="cart added icon"/> : <img src={i_atCart} alt="cart icon"/>}
                 </button>
             </section>
         </article>

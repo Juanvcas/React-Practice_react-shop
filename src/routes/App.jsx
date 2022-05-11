@@ -27,7 +27,7 @@ import "../styles/global.css";
 const App = () => {
     
     //Context
-    const initilState = useInitialState()
+    const initilState = useInitialState();
 
     return (
         <AppContext.Provider value={initilState}>
