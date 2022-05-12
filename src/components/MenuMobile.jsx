@@ -1,10 +1,11 @@
 import React from 'react';
 import "../styles/components/MenuMobile.css";
 
-const MenuMobile = () => {
+const MenuMobile = (props) => {
+    const {toggle,setToggle} = props;
     return (
         <div className="menu__mbl">
-            <span></span>
+            <span onClick={() => setToggle(!toggle)}></span>
             <section className="mbl__cats">
                 <h2>CATEGORIES</h2>
                 <a href="">All</a>

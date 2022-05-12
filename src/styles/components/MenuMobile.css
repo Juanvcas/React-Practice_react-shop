@@ -1,7 +1,7 @@
 /* Menu Mobile */
 .menu__mbl {
     position: absolute;
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 100%;
     height: 100vh;
@@ -15,10 +15,11 @@
 .menu__mbl > span {
     display: block;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 2rem;
-    height: 2rem;
+    top: 1.6rem;
+    right: 1.6rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    padding: 0.2rem;
     background-image: url(../../assets/svg/icon_close.svg);
     background-position: center;
     background-repeat: no-repeat;

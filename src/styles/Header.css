@@ -23,10 +23,6 @@
     height: auto;
 }
 
-.header__menu:hover .menu__mbl {
-    display: flex;
-}
-
 .header__menu > img {
     width: 100%;
 }
@@ -57,7 +53,7 @@
 }
 
 .header__log {
-    display: none;
+    display: flex;
     align-items: center;
     position: relative;
     width: auto;
@@ -65,8 +61,10 @@
 }
 
 .header__log > img {
-    width: 2.4rem;
+    width: 2.8rem;
     height: auto;
+    padding: 0.2rem;
+    cursor: pointer;
 }
 
 .header__log > div:nth-child(3) {
@@ -120,6 +118,7 @@
         font-size: 1.4rem;
         font-weight: 300;
         line-height: 1.75rem;
+        cursor: pointer;
     }
     
     .log__menu > span {

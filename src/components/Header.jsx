@@ -17,12 +17,16 @@ import i_arrDown from "@svgAssets/bt_arrow_down.svg";
 
 const Header = () => {
     const [toggleUser, setToggleUser] = useState(false);
-    const [toggleCart, setToggleCart] = useState(false)
+    const [toggleMenu, setToggleMenu] = useState(false);
+    const [toggleCart, setToggleCart] = useState(false);
 
     const {state:{cart}} = useContext(AppContext);
 
     const handleToggle = () => {
         setToggleUser(toggleUser ? false : true);
+    }
+    const handleToggleMenu = () => {
+        setToggleMenu(!toggleMenu);
     }
     const handleToggleCart = () => {
         setToggleCart(!toggleCart);
@@ -30,9 +34,9 @@ const Header = () => {
 
     return (
         <header className="header">
-            <menu href="" className="header__menu">
+            <menu href="" className="header__menu" onClick={handleToggleMenu}>
                 <img src={i_menu} alt=""/>
-                <MenuMobile/>
+                {toggleMenu && <MenuMobile toggle={toggleMenu} setToggle={setToggleMenu}/>}
             </menu>
             <nav className="header__nav">
                 <ul className="nav__ul">
@@ -46,7 +50,7 @@ const Header = () => {
             </nav>
             <img src={i_ysLogo} alt="Yard sale Logo"/>
             <div className="header__log">
-                <div className="log__menu">example@email.com<span onClick={handleToggle}><img src={i_arrDown} alt="arrow down"/>
+                <div className="log__menu" onClick={handleToggle}>example@email.com<span><img src={i_arrDown} alt="arrow down"/>
                     {toggleUser ? <MenuDesk/> : null}
                 </span></div>
                 <img src={i_shCart} alt="shopping cart" onClick={handleToggleCart}/>

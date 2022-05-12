@@ -1,8 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
     entry: "./src/index.js",
@@ -21,7 +19,7 @@ module.exports = {
             "@svgAssets": path.resolve(__dirname,"src/assets/svg/")
         }
     },
-    mode: "production",
+    mode: "development",
     module: {
         rules: [
             {
@@ -64,11 +62,15 @@ module.exports = {
             filename: "[name].css"
         })
     ],
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new CssMinimizerPlugin(),
-            new TerserPlugin()
-        ]
+    devServer: {
+        static: {
+            directory: path.join(__dirname,"dist"),
+            watch: true
+        },
+        watchFiles: ["./**"],
+        historyApiFallback: true,
+        compress: true,
+        port: 8080,
+        open: true
     }
 }
